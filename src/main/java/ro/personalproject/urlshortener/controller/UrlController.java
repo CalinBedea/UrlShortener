@@ -24,7 +24,7 @@ public class UrlController {
         return ResponseEntity.ok(shortenedUrl);
     }
 
-    @GetMapping("/{shortCode}")
+    @GetMapping("/{shortCode:[^\\.]+}")
     public ResponseEntity<Void> redirectToOriginalUrl(@PathVariable String shortCode) {
         String originalUrl = urlService.getOriginalUrl(shortCode);
 
