@@ -1,4 +1,11 @@
 package ro.personalproject.urlshortener.controller;
 
-public record UrlRequest(String originalUrl) {
+import jakarta.validation.constraints.NotBlank;
+import org.hibernate.validator.constraints.URL;
+
+public record UrlRequest(
+        @NotBlank(message = "Link cannot be blank!")
+        @URL(message = "Please enter a valid web address")
+        String originalUrl
+) {
 }
