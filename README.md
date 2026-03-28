@@ -3,7 +3,7 @@
 A full-stack URL shortener application built with **Java 21** and **Spring Boot 3**. This project demonstrates a clean, 3-tier architecture, complete with backend data validation, error handling, and a responsive frontend.
 
 ## 🚀 Live Demo
-*(Will add the Render link here after deployment! Example: https://my-url-shortener.onrender.com)*
+**[https://url-shortener-calin.onrender.com](https://url-shortener-calin.onrender.com)**
 
 *Note: The project is hosted on a free cloud tier. Please allow ~30 seconds for the server to wake up on the first request.*
 
@@ -22,7 +22,7 @@ A full-stack URL shortener application built with **Java 21** and **Spring Boot 
 * Mobile-responsive, dark-themed UI.
 
 ## 🛠️ Local Setup
-1. Clone the repository: `git clone https://github.com/your-username/urlshortener.git`
+1. Clone the repository: `git clone https://github.com/CalinBedea/UrlShortener.git`
 2. Configure your local PostgreSQL database in `application.properties` or set your environment variables (`DB_USERNAME`, `DB_PASSWORD`).
 3. Run the application using your IDE or via command line: `./gradlew bootRun`
 4. Access the UI at `http://localhost:8080/`
