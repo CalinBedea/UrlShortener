@@ -5,7 +5,7 @@ import org.hibernate.validator.constraints.URL;
 
 public record UrlRequest(
         @NotBlank(message = "Link cannot be blank!")
-        @URL(message = "Please enter a valid web address")
+        @URL(message = "Please enter a valid web address!")
         String originalUrl
 ) {
 }
