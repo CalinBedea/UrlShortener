@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>URL Shortener | Dark Mode</title>
+    <title>URL Shortener | Portfolio</title>
     <style>
         :root {
             --bg-color: #121212;
@@ -25,6 +25,7 @@
             align-items: center;
             height: 100vh;
             margin: 0;
+            position: relative;
         }
 
         .container {
@@ -33,9 +34,10 @@
             border-radius: 12px;
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
             text-align: center;
-            width: 100%;
+            width: 90%;
             max-width: 400px;
             border: 1px solid var(--border-color);
+            box-sizing: border-box;
         }
 
         h2 {
@@ -116,6 +118,15 @@
         .success-box a:hover {
             text-decoration: underline;
         }
+
+        .footer-credit {
+            position: absolute;
+            bottom: 15px;
+            right: 20px;
+            font-size: 12px;
+            color: #666;
+            letter-spacing: 0.5px;
+        }
     </style>
 </head>
 <body>
@@ -128,6 +139,10 @@
     <button onclick="shortenUrl()">Shorten URL</button>
 
     <div id="result"></div>
+</div>
+
+<div class="footer-credit">
+    Developed by Calin Bedea
 </div>
 
 <script>

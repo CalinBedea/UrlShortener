@@ -5,6 +5,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import ro.personalproject.urlshortener.service.UrlService;
 
 import java.net.URI;
@@ -19,7 +20,11 @@ public class UrlController {
     public ResponseEntity<String> shortenUrl(@Valid @RequestBody UrlRequest request) {
         String shortCode = urlService.shortenUrl(request.originalUrl());
 
-        String shortenedUrl = "http://localhost:8080/" + shortCode;
+        String shortenedUrl = ServletUriComponentsBuilder
+                .fromCurrentContextPath()
+                .path("/{shortCode}")
+                .buildAndExpand(shortCode)
+                .toUriString();
 
         return ResponseEntity.ok(shortenedUrl);
     }
