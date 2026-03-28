@@ -1,0 +1,7 @@
+### Creating shortened url
+POST http://localhost:8080/api/url
+Content-Type: application/json
+
+{
+  "originalUrl": "https://www.google.com/search?q=cum+sa+faci+un+API+in+java"
+}
